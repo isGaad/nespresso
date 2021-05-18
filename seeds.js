@@ -1,5 +1,7 @@
 var mongoose    = require('mongoose');
-mongoose.connect("mongodb://localhost:27017/nespresso", { useNewUrlParser: true, useUnifiedTopology: true });
+var config      = require('./app/config');
+var connectionString = `mongodb://${config.db.host}:${config.db.port}/${config.db.name}`;
+mongoose.connect(connectionString, { useNewUrlParser: true, useUnifiedTopology: true });
 
 var pods = [
     { sku: 'CP001', name : 'Small coffee Pod', size: 'small', flavor: 'vanilla', dozens : 1 },
