@@ -4,8 +4,8 @@ var Schema       = mongoose.Schema;
 var PodSchema   = new Schema({
     sku : String,
     name: String,
-    type: Number,
-    flavor: Number,
+    type: String,
+    flavor: String,
     dozens: Number
 });
 

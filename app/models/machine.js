@@ -5,8 +5,8 @@ var MachineSchema   = new Schema({
     sku : String,
     name: String,
     water_line: Boolean,
-    model: Number,
-    type: Number
+    model: String,
+    type: String
 });
 
 module.exports = mongoose.model('Machine', MachineSchema);
