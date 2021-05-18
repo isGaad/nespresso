@@ -7,5 +7,24 @@ var Machine     = require('./app/models/Machine');
 
 mongoose.connect("mongodb://localhost:27017/nespresso", { useNewUrlParser: true, useUnifiedTopology: true });
 
+
+app.get('/pods', function(request, response) {
+    Pod.find(function(err, pods) {
+        if (err)
+            responses.send(err);
+
+        response.json(pods);
+    });
+});
+
+app.get('/machines', function(request, response) {
+    Machine.find(function(err, pods) {
+        if (err)
+            responses.send(err);
+
+        response.json(pods);
+    });
+});
+
 app.listen(port);
 console.log('Listening on port ' + port);
