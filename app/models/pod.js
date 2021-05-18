@@ -5,6 +5,7 @@ var PodSchema   = new Schema({
     sku : String,
     name: String,
     type: String,
+    size: String,
     flavor: String,
     dozens: Number
 });

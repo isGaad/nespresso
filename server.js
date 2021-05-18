@@ -9,7 +9,7 @@ mongoose.connect("mongodb://localhost:27017/nespresso", { useNewUrlParser: true,
 
 
 app.get('/pods', function(request, response) {
-    Pod.find(function(err, pods) {
+    Pod.find(request.query, function(err, pods) {
         if (err)
             responses.send(err);
 
@@ -18,7 +18,7 @@ app.get('/pods', function(request, response) {
 });
 
 app.get('/machines', function(request, response) {
-    Machine.find(function(err, pods) {
+    Machine.find(request.query, function(err, pods) {
         if (err)
             responses.send(err);
 

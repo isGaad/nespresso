@@ -5,6 +5,7 @@ var MachineSchema   = new Schema({
     sku : String,
     name: String,
     water_line: Boolean,
+    size: String,
     model: String,
     type: String
 });
