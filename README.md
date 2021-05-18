@@ -24,7 +24,7 @@ node server.js
 
 ### Available endpoints:-
 
-###Pods
+### Pods
 ```
 /api/pods
 ```
@@ -43,7 +43,7 @@ node server.js
 ### Machines
 
 ```
-/api/pods
+/api/machines
 ```
 ### Machines Filters
 ```
